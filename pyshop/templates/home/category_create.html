@@ -7,7 +7,7 @@
 </head>
 <body>
  
-    <form action="{% url 'categories_create' %}" method="post">
+    <form action="{% url 'categories_create' %}" method="post" enctype="multipart/form-data">
         {% csrf_token %}
         {{form.as_p }}
         <br>

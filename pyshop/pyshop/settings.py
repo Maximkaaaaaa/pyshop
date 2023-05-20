@@ -127,9 +127,9 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 MEDIA_URL = 'media/'
 
-MEDIA_ROOT = '/pyshop/media/home/'
+MEDIA_ROOT = BASE_DIR / 'media/home/'
 
-STATIC_ROOT = "/pyshop/static/home/"
+STATIC_ROOT = BASE_DIR / "static/home/"
 
 if DEBUG:
     STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]

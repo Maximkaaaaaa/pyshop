@@ -42,7 +42,16 @@ class IndexView(ListView):
 class CategoryCreateView(CreateView):
     template_name = "home/category_create.html"
     form_class = CategoryForm
+
+    # def post(self, request):
+    #     form = CategoryForm(request.POST, request.FILES)
+    #     if form.is_valid():
+    #         handle_uploaded_file(request.FILES["file"])
+    #         return HttpResponseRedirect("/success/url/")
+    #
+    #     return render(request, "upload.html", {"form": form})
  
     def form_valid(self, form: CategoryForm) -> None:
+        # print(dir(form))
         form.save()
         return redirect(to="/")
