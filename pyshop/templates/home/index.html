@@ -1,16 +1,18 @@
 {% load static %}
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Categories</title>
+    <link rel="stylesheet" href="{% static 'home/css/style.css' %}">
 </head>
 <body>
-    {% for category in categories %}
-        {{category.name}}
-        {% static 'home/css/style.css' %}
-    <br>
-    {% endfor %}
+<h3>Products available:</h3>
+{% for category in object_list %}
+    <p>{{ category.name }}</p>
+    <img style="max-width: 100px" src="{{ category.image }}" alt="test">
+
+{% endfor %}
+{#    <h1>{{ name }}</h1>#}
 </body>
 </html>

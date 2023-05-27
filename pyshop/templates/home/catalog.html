@@ -5,9 +5,11 @@
     <title>{{ title }}</title>
 </head>
 <body>
-  {% for product in products %}
-    {{ product.name }}
-    <img src="product.im">
-  {% endfor %}
+{#    <h3>{{ products }}</h3>#}
+    <h1>Products available</h1>
+    {% for product in products %}
+        <h3>Product: {{ product }}</h3>
+    {% endfor %}
+
 </body>
 </html>

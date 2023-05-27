@@ -1,9 +1,9 @@
 from django.urls import path
-from .views import catalog, IndexView, CategoryCreateView
+
+from .views import IndexView, catalog, CategoryCreateView
 
 urlpatterns = [
-    # path('', index, name='index'),
-    path('', IndexView.as_view(), name='index'),
-    path('catalog/', catalog, name='catalog'),
-    path('category/create/', CategoryCreateView.as_view(), name='categories_create')
+    path("", IndexView.as_view(), name="index"),  # +
+    path("catalogs/", catalog, name="catalogs"),
+    path("categories/create", CategoryCreateView.as_view(), name="categories_create"),
 ]
