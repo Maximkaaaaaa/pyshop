@@ -46,3 +46,4 @@ class CategoryCreateView(CreateView):
     def form_valid(self, form: CategoryForm) -> None:
         form.save()
         return redirect(to="/")
+
